@@ -7,6 +7,7 @@ const admSchema = mongoose.Schema(
         password:{type:String,require:true},
         department:{type:String,require:true},
         role:{type:String,require:true}
-        
-    }
+
+    },
+    
 )
