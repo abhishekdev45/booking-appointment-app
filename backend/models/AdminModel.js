@@ -9,5 +9,11 @@ const admSchema = mongoose.Schema(
         role:{type:String,require:true}
 
     },
-    
+    {
+        versionKey: false,
+    }
 )
+const  AdminModel =mongoose.model("admin",admSchema);
+module.exports={
+    AdminModel
+}
