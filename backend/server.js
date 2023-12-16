@@ -1,14 +1,23 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const connection = mongoose.connect()
+
 const dotenv = require("dotenv");
 const cors = require("cors");
+
+const appointmentRoutes = require("./routes/adminRoutes/appointments")
+const authRoutes = require("./routes/userRoutes/auth")
+const bookingRoutes = require("./routes/userRoutes/booking")
 
 dotenv.config();
 
 app.use(cors());
 app.use(express.json());
+
+//user_routes
+app.use("/api/auth" , authRoutes );
+app.use("/api/user" , bookingRoutes );
+app.use("/api/admin" , appointmentRoutes);
 
 
 mongoose
