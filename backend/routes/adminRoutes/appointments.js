@@ -30,7 +30,6 @@ router.get('/appointments', async (req, res) => {
   }
 });
 
-// Add other routes and middleware as needed
 
 
 

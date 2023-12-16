@@ -5,7 +5,7 @@ const Document = require("../../models/document")
 const {
     verifyToken
   } = require("./verifyToken");
-//REGISTER
+
 router.post('/booking',verifyToken, async (req, res) => {
     try {
       const userId = req.id; 
