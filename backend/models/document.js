@@ -9,7 +9,7 @@ const documentSchema = new mongoose.Schema({
   paths: [
     {
       type: String,
-      required: true
+      // required: true
     }
   ]
 });

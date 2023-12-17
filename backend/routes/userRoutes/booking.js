@@ -8,7 +8,7 @@ const {
 
 router.post('/booking',verifyToken, async (req, res) => {
     try {
-      const userId = req.id; 
+      const userId = req.user.id; 
   
       const { date, time, department, description } = req.body;
   
@@ -52,15 +52,6 @@ router.post('/booking',verifyToken, async (req, res) => {
   
 
 
-//LOGIN
-
-router.post('/login', async (req, res) => {
-    try {
-       
-    } catch (err) {
-        return res.status(500).json(err);
-    }
-});
 
 
 module.exports = router;

@@ -25,7 +25,7 @@ const appointmentSchema = new mongoose.Schema({
   documentId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Document',
-    required: true
+    // required: true
   }
 });
 
