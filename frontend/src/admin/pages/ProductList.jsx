@@ -24,10 +24,6 @@ const ProductList = () => {
             <input type="email" placeholder="Enter Email" id="email" name="email" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required></input>
         </div>
 
-        <div class="mb-4">
-            <label for="phone" class="block text-gray-600 text-sm font-medium mb-2">Phone Number</label>
-            <input type="tel" id="phone" placeholder="Enter Phone No." name="phone" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required></input>
-        </div>
         
         <div class="mb-4">
             <label for="password" class="block text-gray-600 text-sm font-medium mb-2">Password</label>
@@ -39,8 +35,21 @@ const ProductList = () => {
 
         
         <div class="mb-6">
-            <label for="address" class="block text-gray-600 text-sm font-medium mb-2">Address</label>
-            <input type="address" id="address" placeholder="Enter Address" name="address" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required></input>
+            <label for="address" class="block text-gray-600 text-sm font-medium mb-2"  required>Department</label>
+            <select><option value="Select Department" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>Select Department</option>
+            <option value="Cardiologist">Cardiologist</option>
+            <option value="Neurologist">Neurologist</option>
+            <option value="Physician">Physician</option>
+            <option value="Gynecologist">Gynecologist</option></select>
+        </div>
+
+        <div class="mb-6">
+            <label for="address" class="block text-gray-600 text-sm font-medium mb-2"  required>Role</label>
+            <select><option value="Select Role" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>Select Role</option>
+            <option value="HOD">HOD</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Physician">Receptionist</option>
+            <option value="Admin">Admin</option></select>
         </div>
 
        
