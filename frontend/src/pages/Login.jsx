@@ -6,8 +6,6 @@ export default function Login() {
         <h1 className="form-title">Login Form</h1>
         <form action="#">
           <div className="main-user-info">
-            
-
             <div className="user-input-box">
               <label htmlFor="email">Email Address</label>
               <input

@@ -1,10 +1,10 @@
 import React from 'react'
 
 const Product=() =>{
-    const arr = [1,2,3,4,5,6,7,10,8,9,]
+    const arr = [1,2,3,4,5,6,7,10,]
     return (
       <>
-      <div className="bg-gray-100 grid grid-cols-3 gap-4 min-h-screen">
+      <div className="bg-gray-100 grid grid-cols-4 gap-4 min-h-screen">
         {
           arr.map((item, i) => {
             return(
