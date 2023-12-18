@@ -6,7 +6,6 @@ import Side from './admin/components/Sidebar/Side.js'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx';
 import Appoinmentform from './pages/Appointmentform.jsx';
-import Adminlogin from './pages/Adminlogin.jsx';
 
 const App = () => {
   return (
