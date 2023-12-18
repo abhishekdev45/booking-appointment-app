@@ -18,17 +18,17 @@ const Sidebar = ({children}) => {
     const menuItem=[
         {
             path:"/",
-            name:"Dashboard",
+            name:"Home",
             icon:<FaTh/>
         },
         {
             path:"/about",
-            name:"About",
+            name:"Create Department",
             icon:<FaUserAlt/>
         },
         {
             path:"/analytics",
-            name:"Analytics",
+            name:"Assign Doctor",
             icon:<FaRegChartBar/>
         },
         {
@@ -38,12 +38,12 @@ const Sidebar = ({children}) => {
         },
         {
             path:"/product",
-            name:"Product",
+            name:"Patient Details ",
             icon:<FaShoppingBag/>
         },
         {
             path:"/productList",
-            name:"Product List",
+            name:"Create Admin",
             icon:<FaThList/>
         }
     ]

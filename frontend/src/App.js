@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Home from './pages/home.jsx'
+import Home from './pages/Home.jsx'
 import User from './pages/UserDaskboard.jsx'
 import Admin from './pages/Adminlogin.jsx'
 import Side from './admin/components/Sidebar/Side.js'
@@ -11,9 +11,10 @@ import Appoinmentform from './pages/Appointmentform.jsx';
 const App = () => {
   return (
     <>
-    {/* <Side/> */}
-    <Side
-    />
+    {/* <Home/> */}
+    <Side/>
+    {/* <Login/> */}
+    {/* <Register/> */}
     </>
   );
 };

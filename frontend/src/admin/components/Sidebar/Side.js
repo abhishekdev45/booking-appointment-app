@@ -13,9 +13,9 @@ export default function Side() {
     <BrowserRouter>
       <Sidebar>
         { <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<About />} />
+          <Route path="/About" element={<Dashboard />} />
+          <Route path="/about" element={<Dashboard />} />
           <Route path="/prescription" element={<Prescription />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/product" element={<Product />} />

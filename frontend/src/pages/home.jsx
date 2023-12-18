@@ -142,7 +142,7 @@ function Home() {
 
       {/* Srvices */}
 
-      {/* <section className="bg-slate-100 flex ml-10 mr-10 flex-wrap justify-between mt-8 mb-8 pl-2 pr-2">
+      <section className="bg-slate-100 flex ml-10 mr-10 flex-wrap justify-between mt-8 mb-8 pl-2 pr-2">
         <div className="card w-96 bg-base-100 shadow-xl image-full pl-2 pr-2 pt-3 pb-3 mb-5 rounded-md ">
           <figure>
             <img src={Img} alt="Shoes" className=" m-1 rounded-lg" />
@@ -433,7 +433,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </footer> */}
+      </footer>
     </div>
   );
 }
