@@ -6,7 +6,7 @@ const Dashboard=() =>{
       <form class="max-w-sm mx-auto box-border bg-slate-100 shadow-md pt-10 pl-10 pr-10 pb-20 rounded-md">
 
 <div className='mt-20 flex justify-center text-xl font-extrabold'>
-    <h1 >Create A New Department</h1>
+    <h1 >Create a New Department</h1>
 </div>
 <div class="mb-5 mt-10">
   <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Department Name</label>
