@@ -22,12 +22,12 @@ const Sidebar = ({children}) => {
             icon:<FaTh/>
         },
         {
-            path:"/about",
+            path:"/createdepartment",
             name:"Create Department",
             icon:<FaUserAlt/>
         },
         {
-            path:"/analytics",
+            path:"/assigndoctor",
             name:"Assign Doctor",
             icon:<FaRegChartBar/>
         },
@@ -37,12 +37,12 @@ const Sidebar = ({children}) => {
             icon:<FaCommentAlt/>
         },
         {
-            path:"/product",
+            path:"/patientdetails",
             name:"Patient Details ",
             icon:<FaShoppingBag/>
         },
         {
-            path:"/productList",
+            path:"/createadmin",
             name:"Create Admin",
             icon:<FaThList/>
         }
