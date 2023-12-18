@@ -3,6 +3,7 @@ import React from 'react';
 const Analytics = () => {
     return (
         <>
+        <h1 className='text-center text-blue-600 text-xl text-bold' >Assign Doctor</h1>
         <form class="max-w-sm mx-auto mt-5">
   <div class="mb-5">
     <label for="Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Doctor Name</label>
