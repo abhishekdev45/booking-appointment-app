@@ -8,6 +8,7 @@ const cors = require("cors");
 const appointmentRoutes = require("./routes/adminRoutes/appointments")
 const authRoutes = require("./routes/userRoutes/auth")
 const bookingRoutes = require("./routes/userRoutes/booking")
+const adminRoutes = require("./routes/adminRoutes/admin")
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 //user_routes
+app.use("/api/admin",adminRoutes)
 app.use("/api/auth" , authRoutes );
 app.use("/api/user" , bookingRoutes );
 app.use("/api/admin" , appointmentRoutes);

@@ -1,10 +1,11 @@
 .container_sidebar{
     display:flex;
-   /* width: 100vw; */
+    /* width: 100vw; */
 }
 .main_sidebar{
     width: 100%;
     padding: 20px;
+    height: auto; 
 }
 .sidebar{
     background: #000;
