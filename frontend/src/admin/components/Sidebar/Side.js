@@ -14,12 +14,12 @@ export default function Side() {
       <Sidebar>
         { <Routes>
           <Route path="/" element={<About />} />
-          <Route path="/About" element={<Dashboard />} />
-          <Route path="/about" element={<Dashboard />} />
+          <Route path="/createdepartment" element={<Dashboard />} />
+          <Route path="/assigndoctor" element={<Analytics />} />
           <Route path="/prescription" element={<Prescription />} />
           <Route path="/analytics" element={<Analytics />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/productList" element={<ProductList />} />
+          <Route path="/patientdetails" element={<Product />} />
+          <Route path="/createadmin" element={<ProductList />} />
         </Routes> }
       </Sidebar>
     </BrowserRouter>
