@@ -10,8 +10,8 @@ import Appoinmentform from './pages/Appointmentform.jsx';
 const App = () => {
   return (
     <>
-    <Home/>
-    {/* <Side/> */}
+    {/* <Home/> */}
+    <Side/>
     {/* <Login/> */}
     {/* <Register/> */}
     </>
