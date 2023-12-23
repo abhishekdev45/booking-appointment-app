@@ -6,7 +6,7 @@ const appointmentSchema = new mongoose.Schema({
     required: true
   },
   date: {
-    type: String,
+    type: Date,
     required: true
   },
   time: {
@@ -25,7 +25,7 @@ const appointmentSchema = new mongoose.Schema({
   documentId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Document',
-    // required: true
+    required: true
   }
 });
 

@@ -6,7 +6,7 @@ const { AdminModel } = require("../../models/AdminModel");
 const { Admin } = require("mongodb");
 
 router.post("/register", async (req, res) => {
-  const { id, name, email, password, department, role } = req.body;
+  const {  name, email, password, department, role } = req.body;
   bcrypt.hash(password, 5, async function (err, hash) {
     // Store hash in your password DB.
     if (err) return res.send({ message: "Something went wrong", status: 0 });

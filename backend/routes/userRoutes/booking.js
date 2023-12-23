@@ -11,7 +11,7 @@ router.post('/booking',verifyToken, async (req, res) => {
       const userId = req.user.id; 
   
       const { date, time, department, description } = req.body;
-  
+      console.log(req.body)
       const newBooking = new Appointment({
         date,
         time,
@@ -22,7 +22,7 @@ router.post('/booking',verifyToken, async (req, res) => {
       const savedBooking = await newBooking.save();
   
       const newDocument = new Document({
-        userId,
+        userId:userId,
         paths: [],
       });
   
