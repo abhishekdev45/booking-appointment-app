@@ -2,7 +2,7 @@ const router = require("express").Router();
 
 const Appointment = require("../../models/appointment");
 const Document = require('../../models/document');
-//CREATE
+
 
 router.get('/appointments', async (req, res) => {
   try {

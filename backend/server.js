@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-
+const path = require('path');
+const upload = require("express-fileupload")
 const dotenv = require("dotenv");
 const cors = require("cors");
 
@@ -13,7 +14,9 @@ const adminRoutes = require("./routes/adminRoutes/admin")
 dotenv.config();
 
 app.use(cors());
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.json());
+app.use(upload())
 
 //user_routes
 app.use("/api/admin",adminRoutes)

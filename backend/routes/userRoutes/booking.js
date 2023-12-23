@@ -1,7 +1,8 @@
 const router = require("express").Router();
-const User = require("../../models/user");
 const Appointment = require("../../models/appointment")
 const Document = require("../../models/document")
+const path = require('path');
+
 const {
     verifyToken
   } = require("./verifyToken");
@@ -11,7 +12,8 @@ router.post('/booking',verifyToken, async (req, res) => {
       const userId = req.user.id; 
   
       const { date, time, department, description } = req.body;
-      console.log(req.body)
+      console.log(date)
+
       const newBooking = new Appointment({
         date,
         time,

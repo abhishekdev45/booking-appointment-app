@@ -1,17 +1,73 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-// const token = localStorage.getItem("accessToken");
-const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2MyM2M2NzJkZWViM2U2MjkwOTVmMSIsImlhdCI6MTcwMjk4NDg1NSwiZXhwIjoxNzAzMjQ0MDU1fQ.UmVXn0Pxbbgz4Kcrr_SkfONVn1M1Q6eDi-g8wMZJXpc";
+//   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2MyM2M2NzJkZWViM2U2MjkwOTVmMSIsImlhdCI6MTcwMjk4NDg1NSwiZXhwIjoxNzAzMjQ0MDU1fQ.UmVXn0Pxbbgz4Kcrr_SkfONVn1M1Q6eDi-g8wMZJXpc";
 
 function Appoinmentform() {
+  // const [formData, setFormData] = useState({
+  //   date: "",
+  //   time: "",
+  //   service: "",
+  //   message: "",
+  //   document: null,
+  // });
+
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  //   // console.log(formData);
+  // };
+
+  // const [formDataApi2, setFormDataApi2] = useState(new FormData());
+
+  // const handleFileUpload = (event) => {
+  //   const file = event.target.files[0];
+  //   setFormDataApi2((prevFormData) => {
+  //     const newFormData = new FormData();
+  //     newFormData.append("file", file);
+  //     newFormData.append("date", formData.date);
+  //     newFormData.append("time", formData.time);
+  //     newFormData.append("department", formData.service);
+  //     newFormData.append("description", formData.message);
+  //     console.log(newFormData);
+  //     return newFormData;
+  //   });
+  // };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   try {
+  //     const { date, time, service, message } = formData;
+
+  //     formDataApi2.append("date", date);
+  //     formDataApi2.append("time", time);
+  //     formDataApi2.append("department", service);
+  //     formDataApi2.append("description", message);
+  //     console.log(formDataApi2);
+  //     const response = await axios.post(
+  //       "http://localhost:4000/api/user/booking",
+  //       formDataApi2,
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${token}`, // Changed 'token' to 'Authorization'
+  //         },
+  //       }
+  //     );
+
+  //     console.log("Appointment booked successfully:", response.data);
+  //   } catch (error) {
+  //     console.error("Error booking appointment:", error.response.data);
+  //   }
+  // };
   const [formData, setFormData] = useState({
     date: "",
     time: "",
     service: "",
     message: "",
-    document: null,
   });
 
   const handleChange = (e) => {
@@ -22,36 +78,31 @@ function Appoinmentform() {
     }));
   };
 
-  const formDataApi2 = new FormData();
+  const [file, setFile] = useState(null);
 
   const handleFileUpload = (event) => {
-    // get the selected file from the input
-    const file = event.target.files[0];
-    console.log(file);
-    // create a new FormData object and append the file to
-    formDataApi2.append("file", file);
-    console.log(formDataApi2);
+    setFile(event.target.files[0]);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const { date, time, service, message } = formData;
-      console.log(formData);
-      formDataApi2.append("date", date); // Uncomment this line
-      formDataApi2.append("time", time); // Uncomment this line
-      formDataApi2.append("department", service); // Uncomment this line (assuming 'department' corresponds to 'service')
-      formDataApi2.append("description", message); // Uncomment this line (assuming 'description' corresponds to 'message')
-      console.log(formDataApi2);
+      const formDataApi2 = new FormData();
+      formDataApi2.append("file", file);
+      formDataApi2.append("date", formData.date);
+      formDataApi2.append("time", formData.time);
+      formDataApi2.append("department", formData.service);
+      formDataApi2.append("description", formData.message);
 
-      // Make a POST request using Axios
+      console.log(file, formData);
+
       const response = await axios.post(
         "http://localhost:4000/api/user/booking",
         formDataApi2,
         {
           headers: {
-            token: `Bearer ${token}`, // Change 'token' to 'Authorization'
+            Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },
         }
       );
@@ -61,7 +112,6 @@ function Appoinmentform() {
       console.error("Error booking appointment:", error.response.data);
     }
   };
-
   return (
     <div className="max-w-md mx-auto mt-10 bg-white shadow-lg rounded-lg overflow-hidden">
       <div className="text-2xl py-4 px-6 bg-gray-900 text-white text-center font-bold uppercase">
